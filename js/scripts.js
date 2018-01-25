@@ -2,12 +2,18 @@ var dinoArray = ["DinoSprites_doux.gif", "DinoSprites_mort.gif", "DinoSprites_ta
 
 function randomDino () {
   var randomNum = Math.floor(Math.random() * 4);
-  console.log(randomNum);
-  console.log(document.getElementById("dinoDisplay").src = "img/" + dinoArray[randomNum]);
+  document.getElementById("dinoDisplay").src = "img/" + dinoArray[randomNum];
 }
 
+function resetGame() {
+  $(".titlePage").show();
+  $(".dinogatchi").hide();
+  $("#youLose").hide();
+  randomDino();
+  healthBar = 101;
 
-
+  console.log(healthBar);
+}
 
 $(function(){
   var healthBar = parseFloat($(".progress-bar").css("width")) + 1;
@@ -40,6 +46,7 @@ $(function(){
 
   $("#submitName").click(function(event){
     event.preventDefault();
+    console.log(healthBar);
 
     var dinoName = ($("#nameMyDino").val());
     if (dinoName == ""){
@@ -51,10 +58,26 @@ $(function(){
       $(".dinogatchi").show();
       $(".dinoName").text(dinoName);
 
-      setInterval(function() {
-        $(".progress-bar").text(healthBar-=1);
-        $(".progress-bar").css("width", healthBar + "%");
+      var isAlive = true;
+
+      var running = setInterval(function() {
+        if (isAlive) {
+          $(".progress-bar").text(healthBar-=1);
+          $(".progress-bar").css("width", healthBar + "%");
+          if (healthBar < 0){
+            isAlive = false;
+          }
+        }
+          else {
+            alert("You have killed " + dinoName);
+            $("#youLose").show();
+            $("#youLoseP").text("Your dinosaur has shuffled off this mortal coil.");
+            clearInterval(running);
+          }
       }, 1000);
+      $("#resetGame").click(function(){
+        resetGame();
+      })
     }
 
   })

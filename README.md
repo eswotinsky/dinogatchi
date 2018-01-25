@@ -1,18 +1,37 @@
-game start
-  - user receives egg
-  - egg hatches into random dinosaur
+# _Dinogatchi_
+
+#### _The virtual pet dinosaur, 01.25.2018_
+
+#### By _**Eric Swotinsky and Jamie Pittak**_
+
+## Description
+
+_This application lets users care for a virtual dinosaur pet resembling a Tamogatchi_
+
+**Known Issues:**
+* Upon resetting the game, user's new dinosaur pet spawns with negative health and dies immediately.
+* Health bar does not currently cap at any value.
 
 
+## Rules of Gameplay
+
+_Keep your dinosaur alive by attending to its needs! Click the buttons to give it food, help it rest, etc._
 
 
-eat
+## Setup/Installation Requirements
 
-sleep
+_No setup necessary. View online at https://eswotinsky.github.io/dinogatchi._
 
-play
+## Support and Contact Details
 
-health
+_Please contact eric.swotinsky@gmail.com or charrawr456@gmail.com with any questions or comments._
 
-poop
+## Technologies Used
 
-all needs gradually decrease
+_This project was created in HTML, CSS, and JavaScript (drawing on the Bootstrap and jQuery frameworks). It was authored using the Atom text editor._
+
+### License
+
+*This project is released under the GNU GPL license.*
+
+Copyright (c) 2018 **_Eric Swotinsky and Jamie Pittak_**
