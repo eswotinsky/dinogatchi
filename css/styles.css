@@ -1,13 +1,25 @@
-body{
+body {
   text-align: center;
   background-color: lightblue;
 }
 
+.col-xs-2 {
+  background-color: lightgreen;
+}
+
 img {
-  width: 8%;
+  width: 50px;
   height: auto;
 }
 img.center {
     display: block;
     margin: 0 auto;
+}
+
+.btn{
+padding: 2px;
+margin-top: 2px
+}
+.dinogatchi{
+  display: none;
 }
