@@ -1,18 +1,18 @@
-// function healthDecay() {
-//   var healthBarLength = 100;
-//   while($(".progress-bar").css("width") > "20%") {
-//     console.log("hi");
-//     $(".progress-bar").css("width") = healthBarLength + "%";
-//     healthBarLength -= 10;
-//   }
-// }
+var dinoArray = ["DinoSprites_doux.gif", "DinoSprites_mort.gif", "DinoSprites_tard.gif", "DinoSprites_vita.gif"];
+
+function randomDino () {
+  var randomNum = Math.floor(Math.random() * 4);
+  console.log(randomNum);
+  console.log(document.getElementById("dinoDisplay").src = "img/" + dinoArray[randomNum]);
+}
+
 
 
 
 $(function(){
-  var healthBar = parseFloat($(".progress-bar").css("width"));
+  var healthBar = parseFloat($(".progress-bar").css("width")) + 1;
 
-
+  randomDino();
 
   $("#cookie").click(function(){
     healthBar += 15;
@@ -38,11 +38,6 @@ $(function(){
     $(".progress-bar").css("width", healthBar + "%");
   })
 
-  // setInterval(function() {
-  //   $("#timer").text(time-=1);
-  //   $("#timer").toggleClass("red");
-  // }, 1000);
-
   $("#submitName").click(function(event){
     event.preventDefault();
 
@@ -55,10 +50,7 @@ $(function(){
       $(".titlePage").hide();
       $(".dinogatchi").show();
       $(".dinoName").text(dinoName);
-      // healthDecay();
-      // console.log($(".progress-bar").width);
 
-      
       setInterval(function() {
         $(".progress-bar").text(healthBar-=1);
         $(".progress-bar").css("width", healthBar + "%");
