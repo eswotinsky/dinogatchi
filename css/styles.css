@@ -16,10 +16,20 @@ img.center {
     margin: 0 auto;
 }
 
+.red {
+  color: red;
+}
+
 .btn{
 padding: 2px;
 margin-top: 2px
 }
 .dinogatchi{
   display: none;
+}
+
+.progress {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
 }

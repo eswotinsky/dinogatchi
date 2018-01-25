@@ -25,12 +25,19 @@
         </div>
         <div class="dinogatchi">
         <h1 class="dinoName"></h1>
-        <img src="img/DinoSprites_vita.gif" class ="center"><hr>
+        <img src="img/DinoSprites_vita.gif" class ="center">
+        <hr>
 
-        <button class="btn btn-warning" type="button">Give Cookie</button>
-        <button class="btn btn-warning" type="button">Give Bandaid</button>
-        <button class="btn btn-warning" type="button">Rest</button>
-        <button class="btn btn-warning" type="button">Clean</button>
+
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+
+        <button class="btn btn-warning" type="button" id="cookie">Give Cookie</button>
+        <button class="btn btn-warning" type="button" id="bandAid">Give Bandaid</button>
+        <button class="btn btn-warning" type="button" id="rest">Rest</button>
+        <button class="btn btn-warning" type="button" id="clean">Clean</button>
       </div>
       </div>
 
@@ -40,3 +47,10 @@
   </div>
 </body>
 </html>
+
+<!--
+<div id="health-bar" data-total="1000" data-value="1000">
+  <div class="bar">
+    <label for="bar">H e a l t h</label>
+  </div>
+ </div> -->
