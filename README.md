@@ -10,6 +10,7 @@ _This application lets users care for a virtual dinosaur pet resembling a Tamoga
 
 **Known Issues:**
 * Health bar can temporarily exceed 100.
+* Health can be increased via pressing buttons even after dinosaur has died. Health granted after dinosaur death does not decay over time.
 
 
 ## Rules of Gameplay
