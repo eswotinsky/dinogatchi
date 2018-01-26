@@ -9,8 +9,7 @@
 _This application lets users care for a virtual dinosaur pet resembling a Tamogatchi_
 
 **Known Issues:**
-* Upon resetting the game, user's new dinosaur pet spawns with negative health and dies immediately.
-* Health bar does not currently cap at any value.
+* Health bar can temporarily exceed 100.
 
 
 ## Rules of Gameplay

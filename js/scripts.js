@@ -12,11 +12,16 @@ function resetGame() {
   randomDino();
   healthBar = 101;
 
-  console.log(healthBar);
 }
-
+var healthBar;
 $(function(){
-  var healthBar = parseFloat($(".progress-bar").css("width")) + 1;
+  healthBar = parseFloat($(".progress-bar").css("width")) + 1;
+
+  setInterval(function() {
+    if(healthBar > 101) {
+      healthBar = 101;
+    }
+  },1);
 
   randomDino();
 
@@ -46,7 +51,6 @@ $(function(){
 
   $("#submitName").click(function(event){
     event.preventDefault();
-    console.log(healthBar);
 
     var dinoName = ($("#nameMyDino").val());
     if (dinoName == ""){
@@ -64,17 +68,16 @@ $(function(){
         if (isAlive) {
           $(".progress-bar").text(healthBar-=1);
           $(".progress-bar").css("width", healthBar + "%");
-          if (healthBar < 0){
+          if (healthBar < 1){
             isAlive = false;
           }
         }
           else {
-            alert("You have killed " + dinoName);
             $("#youLose").show();
             $("#youLoseP").text("Your dinosaur has shuffled off this mortal coil.");
             clearInterval(running);
           }
-      }, 1000);
+      }, 500);
       $("#resetGame").click(function(){
         resetGame();
       })
